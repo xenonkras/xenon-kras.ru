@@ -7,7 +7,7 @@ $('#new-order-form button').click(function() {
     type: 'POST',
     url: 'http://notificator.fenixlz.ru/send',
     data: data_html,
-    success: function(msg) {
+    success: function() {
       $('#new-order-form button').text('Отправлено');
     },
     error: function(argument) {
