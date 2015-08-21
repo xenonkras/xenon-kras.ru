@@ -51,6 +51,7 @@
         <div class="col-sm-4 well">
           <p class='text-center medium-text'>Оформить заказ</p>
           <form id="new-order-form">
+            <input type="hidden" name='source' value="xenon-kras.ru">
             <div class="radio">
               <label>
                 <input type="radio" name="product" id="optionsRadios1" value="Комплект ксенона" checked>
@@ -69,7 +70,6 @@
                 Галогенные лампы
               </label>
             </div>
-            <input type="hidden" name='source' value="xenon-kras.ru">
             <input type="text" name='name' class="form-control" placeholder="Ваше имя"><br>
             <input type="text" name='phone' class="form-control" placeholder="Ваш номер телефона"><br>
             <button type="button" class="btn btn-success btn-lg btn-block">Отправить заказ</button>
