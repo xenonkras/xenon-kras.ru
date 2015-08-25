@@ -3,7 +3,7 @@ $(document).ready(function() {
     var name = $('#new-order-form input[name="name"]').val(),
         phone = $('#new-order-form input[name="phone"]').val();
     if (name == '' || phone == '') {
-      alert('НЕОБХОДИМО ВВЕСТИ ВАШЕ ИМЯ И ТЕЛЕФОН');
+      alert("ЗДРАСТВУЙТЕ!\n\nДЛЯ ОТПРАВКИ ЗАКАЗА,\n\nНЕОБХОДИМО ВВЕСТИ ВАШЕ ИМЯ И ТЕЛЕФОН.");
     } else {
       var data_html = $('#new-order-form').serialize();
       $('#new-order-form input').attr('disabled', true);
