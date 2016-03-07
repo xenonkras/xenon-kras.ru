@@ -1,9 +1,17 @@
 $(document).ready(function() {
+
+  $('#phone-input').formatter({
+    'pattern': '+7 ({{999}}) {{999}}-{{9999}}'
+  });
+
   $('#new-order-form button').click(function() {
-    var name = $('#new-order-form input[name="name"]').val(),
+    var phoneRegexp = /^\+7 \(\d{3}\) \d{3}-\d{4}$/,
+        name = $('#new-order-form input[name="name"]').val(),
         phone = $('#new-order-form input[name="phone"]').val();
     if (name == '' || phone == '') {
-      alert("ЗДРАСТВУЙТЕ!\n\nДЛЯ ОТПРАВКИ ЗАКАЗА,\n\nНЕОБХОДИМО ВВЕСТИ ВАШЕ ИМЯ И ТЕЛЕФОН.");
+      alert("Для отправки заказа,\n\nнеобходимо ввести ваше имя и телефон.");
+    } else if (!phone.match(phoneRegexp)) {
+      alert("Неверный номер телефона.\n\nНомер нужно ввести в федеральном формате.\n\nВозможно, не хватает одной или более цифр.");
     } else {
       var data_html = $('#new-order-form').serialize();
       $('#new-order-form input').attr('disabled', true);
