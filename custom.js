@@ -19,7 +19,7 @@ $(document).ready(function() {
       $('#new-order-form button').text('Отправляем...');
       $.ajax({
         type: 'POST',
-        url: 'http://notificator.abcbrands.ru/send',
+        url: 'https://notificator.abcbrands.ru/send',
         data: data_html,
         success: function() {
           $('#new-order-form button').text('Отправлено');
